@@ -1,25 +1,97 @@
 #!/bin/bash
+
+shopt -s globstar
+echo Compiling tex files...
+
+# Trigger all PDF builds
+find ./tex -print0 | while IFS= read -r -d '' file
+do
+	if [ -f "$file" ]; then
+		if [[ $file == *tex ]]; then 
+			readarray -d / -t pathSegments <<< $file
+			len="${#pathSegments[@]}"
+			i=2
+			outputPath="./tex"
+
+			while [ $i -ne $len ]
+			do
+				if [ $i -ne $((len - 1)) ]; then
+					outputPath="$outputPath/${pathSegments[$i]}"
+				fi
+				i=$((i + 1))
+			done
+
+			pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="$outputPath"  "$file" > /dev/null
+		fi
+	fi
+done
+
+# Cleanup
+rm -rf pdf
+rm -rf png
+mkdir pdf
+mkdir png
+
+for file in ./tex/**/*; do
+	if [ -f "$file" ]; then
+		if [[ $file == *aux || $file == *fls || $file == *synctex.gz || $file == *log ]]; then
+			rm "$file"
+		fi
+	fi
+done
+
+# Generate PNGs
 find . -print0 | while IFS= read -r -d '' file
 do
   if [ -f "$file" ]; then
 	if [[ $file == *pdf ]]; then
-		echo $file
+		readarray -d . -t arr <<< $file
+		fileName="${arr[1]:1}"
+		
 		mkdir temp
-		gm convert "$file" +adjoin temp/temp%02d.png
+		gm convert -density 300 -fuzz 80% -trim "$file" -quality 100 -bordercolor white -border 150x100 +adjoin "./temp/temp%02d.jpg"
 
-		for temp in ./temp/*.png
+		for f in ./temp/*.jpg
 		do
-			gm convert "$temp" -fuzz 80% -trim +repage -bordercolor white -border 50x25 "$temp"
+			gm convert "$f" +repage "$f"
 		done
 
-		readarray -d . -t arr <<< $file
-
-		gm convert -append ./temp/*.png "${arr[1]:1}.png"
-		
+		gm convert -append "./temp/*.jpg" "${fileName}.png"
 		rm -rf temp
-		rm "$file" "${arr[1]:1}.synctex.gz"
 	fi
 fi
+done
+
+# Move files to their own directories
+find ./tex -print0 | while IFS= read -r -d '' file
+do
+	if [ -f "$file" ]; then
+		if [[ $file == *pdf || $file == *png ]]; then
+			readarray -d / -t arr <<< $file
+			len="${#arr[@]}"
+			i=2
+			
+			# Make sure the files are routed to the correct directories
+			if [[ $file == *pdf ]]; then
+				path="./pdf"
+			elif [[ $file == *png ]]; then
+				path="./png"
+			fi
+
+			# Create the new file path
+			while [ $i -ne $len ]
+			do
+				if [ $i -ne $((len - 1)) ]; then
+					path="${path}/${arr[$i]}"
+				fi
+				
+				i=$((i+1))	
+			done
+
+			mkdir -p "$path" # Ensure the directories exist
+			mv "$file" "$path" # Move the files
+		fi
+	fi
 done
 
 git add .

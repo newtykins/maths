@@ -1,4 +1,4 @@
-\LoadClass[17pt]{extarticle}
+\LoadClass[12pt]{extarticle}
 \pagenumbering{gobble}
 
 \usepackage{geometry}

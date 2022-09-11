@@ -1,5 +1,5 @@
-# maths
+![](assets/banner.jpeg)
 
-cool maths stuff
+# newtykins/maths
 
-good readme coming soon ty honk honk
+readme still coming soon

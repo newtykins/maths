@@ -1,0 +1,20 @@
+{
+	"Begin a dmath block": {
+		"prefix": "dmath",
+		"body": [
+			"\\begin{dmath}",
+			"",
+			"\\end{dmath}"
+		]
+	},
+	
+	"Begin a new question": {
+		"prefix": "question",
+		"body": [
+			"\\section*{Question $0}",
+			"\\begin{subequations}",
+			"",
+			"\\end{subequations}"
+		]
+	}
+}
