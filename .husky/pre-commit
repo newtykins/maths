@@ -46,18 +46,23 @@ do
   if [ -f "$file" ]; then
 	if [[ $file == *pdf ]]; then
 		readarray -d . -t arr <<< $file
-		fileName="${arr[1]:1}"
-		
-		mkdir temp
-		gm convert -density 300 -fuzz 80% -trim "$file" -quality 100 -bordercolor white -border 150x100 +adjoin "./temp/temp%02d.jpg"
+		readarray -d / -t pathSegments <<< "${arr[1]}"
 
-		for f in ./temp/*.jpg
-		do
-			gm convert "$f" +repage "$f"
-		done
+		# Ignore the homework directory when creating PNGs - they are unnecessary
+		if [ "${pathSegments[2]}" != "homework" ]; then
+			fileName="${arr[1]:1}"
+			
+			mkdir temp
+			gm convert -density 300 -fuzz 80% -trim "$file" -quality 100 -bordercolor white -border 150x100 +adjoin "./temp/temp%02d.jpg"
 
-		gm convert -append "./temp/*.jpg" "${fileName}.png"
-		rm -rf temp
+			for f in ./temp/*.jpg
+			do
+				gm convert "$f" +repage "$f"
+			done
+
+			gm convert -append "./temp/*.jpg" "${fileName}.png"
+			rm -rf temp
+		fi
 	fi
 fi
 done

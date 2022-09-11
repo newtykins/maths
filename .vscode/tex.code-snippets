@@ -8,10 +8,22 @@
 		]
 	},
 	
-	"Begin a new question": {
+	"Begin a new single-part question": {
 		"prefix": "question",
 		"body": [
 			"\\section*{Question $0}",
+			"\\text{$1}",
+			"\\begin{dmath}",
+			"",
+			"\\end{dmath}"
+		]
+	},
+
+	"Begin a new multi-part question": {
+		"prefix": "question-m",
+		"body": [
+			"\\section*{Question $0}",
+			"\\text{$1}",
 			"\\begin{subequations}",
 			"",
 			"\\end{subequations}"
