@@ -49,7 +49,7 @@ do
 		readarray -d / -t pathSegments <<< "${arr[1]}"
 
 		# Ignore the homework directory when creating PNGs - they are unnecessary
-		if [ "${pathSegments[2]}" != "homework" ]; then
+		if [ "${pathSegments[2]}" != "Homework" ]; then
 			fileName="${arr[1]:1}"
 			
 			mkdir temp
@@ -61,6 +61,7 @@ do
 			done
 
 			gm convert -append "./temp/*.jpg" "${fileName}.png"
+			
 			rm -rf temp
 		fi
 	fi

@@ -12,6 +12,6 @@
         "commitlint.config.js": true,
         "**/pnpm-lock.yaml": true
     },
-    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
     "latex-workshop.latex.autoClean.run": "onBuilt"
 }

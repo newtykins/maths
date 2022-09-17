@@ -1,0 +1,333 @@
+\documentclass{../../main}
+
+\rhead{J. Smith}
+
+\begin{document}
+	\title{Pure Book 2, Exercise 6C}
+
+	% Question 1
+
+	\question{Rewrite the following as powers of $\sec\theta$, $\csc\theta$, or $\cot\theta$.}
+
+	\begin{arr}
+		\inverse{\sin^3 \theta} = \csc^3 \theta \\
+
+		\frac{4}{\tan^6 \theta} = 4\cot^6 \theta \\
+
+		\inverse{2\cos^2 \theta} = 2\sec^2 \theta \\
+
+		\frac{1 - \sin^2 \theta}{\sin^2 \theta} = \frac{\cos^2 \theta}{\sin^2 \theta} = \cot^2 \theta \\
+
+		\frac{\sec \theta}{\cos^4 \theta} = \sec^5 \theta \\
+
+		\sqrt{\csc^3 \theta \cot \theta \sec \theta} = \sqrt{\frac{\cos \theta}{\sin^4 \theta \cos \theta}} = \inverse{\sqrt{\sin^4 \theta}} = \inverse{\sin^2 \theta} = \csc^2 \theta \\
+
+		\frac{2}{\sqrt{\tan \theta}} = 2\cot^{\inverse{2}} \theta \\
+
+		\frac{\csc^2 \theta \tan^2 \theta}{\cos \theta} = \frac{\sin^2 \theta}{\sin^2 \theta \cos^3 \theta} = \inverse{\cos^3 \theta} = \sec^3 \theta
+	\end{arr}
+
+	% Question 2
+
+	\question{Write down the value(s) of $\cot x$ in each of the following equations.}
+	
+	\begin{arr}[a]
+		5\sin x= 4\cos x \\
+		\frac{\cos x}{\sin x} = \frac{5}{4} \\
+		\therefore \cot x = \frac{5}{4}
+	\end{arr}
+
+	\begin{arr}[b]
+		\tan x = -2 \\
+		\therefore \cot x = -\inverse{2}
+	\end{arr}
+
+	\begin{arr}[c]
+		3\frac{\sin x}{\cos x} = \frac{\cos x}{\sin x} \\
+		3\sin^2 x = \cos^2 x \\
+		\frac{\cos^2 x}{\sin^2 x} = 3 \\
+		\cot^2 x = 3 \\
+		\cot x = \pm \sqrt{3}
+	\end{arr}
+
+	% Question 3
+	
+	\question{Using the definitions of $\sec$, $\csc$, $\cot$, and $\tan$, simplify the following expressions.}
+
+	\begin{arr}
+		\sin \theta \cot \theta = \frac{\sin \theta}{\tan \theta} = \frac{\sin \theta}{\frac{\sin \theta}{\cos \theta}} = \frac{\sin \theta \cos \theta}{\sin \theta} = \cos \theta \\
+
+		\tan \theta \cot \theta = \frac{\tan \theta}{\tan \theta} = 1 \\
+
+		\tan 2\theta \csc 2\theta = \frac{\tan 2\theta}{\sin 2\theta} = \frac{\frac{\sin 2\theta}{\cos 2\theta}}{\sin 2\theta} = \frac{\sin 2\theta}{\sin 2\theta \cos 2\theta} = \inverse{\cos 2\theta} = \sec 2\theta \\ \\
+
+		\cos \theta \sin \theta(\cot \theta + \tan \theta) = \cos \theta \sin \theta \cot \theta + \cos \theta \sin \theta \tan \theta = \frac{\sin \theta \cos \theta}{\frac{\sin \theta}{\cos \theta}} + \frac{\sin^2 \theta \cos \theta}{\cos \theta} \\
+		= \frac{\sin \theta \cos^2 \theta}{\sin \theta} + \frac{\sin^2 \theta \cos \theta}{\cos \theta} = \sin^2 \theta + \cos^2 \theta = 1 \\ \\
+
+		\sin^3 x \csc x + \cos^3 x \sec x = \frac{\sin^3 x}{\sin x} + \frac{\cos^3 x}{\cos x} = \sin^2 x + \cos^2 x = 1 \\
+		
+		\sec A - \sec A \sin^2 A = \sec A \cdot (1 - \sin^2 A) = \frac{\cos^2 A}{\cos A} = \cos A \\ \\
+
+		\sec^2 x \cos^5 x + \cot x \csc x \sin^4 x = \frac{\cos^5 x}{\cos^2 x} + \frac{\sin^4 x}{\frac{\sin^2 x}{\cos x}} = \cos^3 x + \sin^2 x \cos x \\
+		= \cos x \cdot (\sin^2 x + \cos^2) = \cos x
+	\end{arr}
+
+	% Question 4 
+	
+	\question{Prove that:}
+
+	\begin{arr}[a]
+		\cos \theta + \sin \theta \tan \theta \equiv \sec \theta \\
+		
+		\cos \theta + \frac{\sin^2 \theta}{\cos \theta} \equiv \frac{\sin^2 \theta + \cos^2 \theta}{\cos \theta} \equiv \inverse{\cos \theta} \equiv \sec \theta
+	\end{arr}
+
+	\begin{arr}[b]
+		\cot \theta + \tan \theta \equiv \csc \theta \sec \theta \\
+
+		\frac{\cos \theta}{\sin \theta} + \frac{\sin \theta}{\cos \theta} \equiv \frac{\sin^2 \theta + \cos^2 \theta}{\sin \theta \cos \theta} \equiv \inverse{\sin \theta \cos \theta} \equiv \inverse{\sin \theta} \cdot \inverse{\cos \theta} \equiv \csc \theta \sec \theta
+	\end{arr}
+
+	\begin{arr}[c]
+		\csc \theta - \sin \theta \equiv \cos \theta \cot \theta \\
+		
+		\inverse{\sin \theta} - \sin \theta \equiv \frac{1 - \sin^2 \theta}{\sin \theta} \equiv \frac{\cos^2 \theta}{\sin \theta} \equiv \cos \theta \cdot \frac{\cos \theta}{\sin \theta} \equiv \cos \theta \cot \theta
+	\end{arr}
+
+	\begin{arr}[d]
+		(1 - \cos x)(1 + \sec x) \equiv \sin x \tan x \\
+
+		1 + \sec x - \cos x - \cos x \sec x \equiv \sec x - \cos x \equiv \inverse{\cos x} - \cos x \\
+		\equiv \frac{1 - \cos^2 x}{\cos x} \equiv \frac{\sin^2 x}{\cos x} \equiv \sin x \cdot \frac{\sin x}{\cos x} \equiv \sin x \tan x
+	\end{arr}
+
+	\begin{arr}[e]
+		\frac{\cos x}{1 - \sin x} + \frac{1 - \sin x}{\cos x} \equiv 2\sec x \\
+
+		\frac{\cos^2 x + (1 - \sin x)^2}{\cos x \cdot (1 - \sin x)} \equiv \frac{cos^2 x + 1 - 2\sin x + \sin^2 x}{\cos x \cdot (1 - \sin x)} \equiv \frac{2 - 2\sin x}{\cos x \cdot (1 - \sin x)} \equiv \frac{2(1 - \sin x)}{\cos x \cdot (1 - \sin x)} \\
+		\equiv \frac{2}{\cos x} \equiv 2\sec x
+	\end{arr}
+
+	\begin{arr}[f]
+		\frac{\cos \theta}{1 + \cot \theta} \equiv \frac{\sin \theta}{1 + \tan \theta} \\
+
+		\frac{\cos \theta}{1 + \inverse{\tan \theta}} \equiv \frac{\cos \theta}{\frac{1 + \tan \theta}{\tan \theta}} \equiv \frac{\cos \theta \tan \theta}{1 + \tan \theta} \equiv \frac{\sin \theta}{1 + \tan \theta}
+	\end{arr}
+
+	% Question 5 
+	
+	\question{Solve, for values of $\theta$ in the interval $0 \leq \theta \leq 360\deg$, the following equations. Give your answers to 3 significant figures where necessary.}
+
+	\begin{arr}[a]
+		\sec \theta = \sqrt{2} \\
+		\Rightarrow \inverse{\cos \theta} = \sqrt{2} \\
+		\therefore \cos \theta = \inverse{\sqrt{2}} \quad \therefore \theta = 45 \deg \\
+		\text{Solutions in the interval are $45 \deg$ and $315 \deg$}
+	\end{arr}
+
+	\begin{arr}[b]
+		\csc \theta = -3 \\
+		\Rightarrow \inverse{\sin \theta} = -3 \\
+		\therefore \sin \theta = -\inverse{3} \quad \therefore \theta = -19.5 \deg \sig{3} \\
+		\text{Solutions in the interval are $199 \deg$ and $341 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[c]
+		5\cot \theta = -2 \\
+		\therefore \tan \theta = -2.5 \quad \theta = -68.2 \sig{3} \\
+		\text{Solutions in the interval are $112 \deg$ and $292 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[d]
+		\csc \theta = 2 \\
+		\therefore \sin \theta = \inverse{2} \quad \theta = 30 \deg \\
+		\text{Solutions in the interval are $30 \deg$ and $150 \deg$}
+	\end{arr}
+
+	\begin{arr}[e]
+		3\sec^2 \theta - 4 = 0 \\
+		\therefore \cos \theta = \pm \frac{\sqrt{3}}{2} \quad \theta = \pm30 \deg \\
+		\text{Solutions in the interval are $30 \deg$, $150 \deg$, $210 \deg$, and $330 \deg$}
+	\end{arr}
+
+	\begin{arr}[f]
+		5\cos \theta = 3\cot \theta \\
+		\Rightarrow 5\cos \theta \sin \theta = 3\cos \theta \quad \therefore \sin \theta = \frac{3}{5} \quad \therefore \theta = 36.9 \deg \sig{3} \\
+		\Rightarrow \cos \theta \cdot (5\sin \theta - 3\cos \theta) = 0 \quad \therefore \cos \theta = 0 \quad \therefore \theta = 90 \deg \\
+		\text{Solutions in the interval are $36.9 \deg \sig{3}$, $90 \deg$, $143 \deg \sig{3}$, and $270 \deg$} 
+	\end{arr}
+
+	\begin{arr}[g]
+		\cot^2 \theta - 8\tan \theta = 0 \\
+		\therefore \tan \theta = \inverse{2} \quad \therefore \theta = 26.6 \deg \sig{3} \\
+		\text{Solutions in the interval are $26.6 \deg$ and $207 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[h]
+		2\sin \theta = \csc \theta \\
+		\therefore \sin \theta = \pm \inverse{\sqrt{2}} \quad \therefore \theta = \pm 45 \deg \\
+		\text{Solutions in the interval are $45 \deg$, $135 \deg$, $225 \deg$, and $315 \deg$}
+	\end{arr}
+
+	\newpage
+
+	% Question 6 
+	
+	\question{Solve, for values of $\theta$ in the interval $-180 \deg \leq \theta \leq 180 \deg$, the following equations:}
+
+	\begin{arr}[a]
+		\csc \theta = 1 \\
+		\therefore \sin \theta = 1 \quad \therefore \theta = 90 \deg \\
+		\text{The only solution in the interval is $90 \deg$}
+	\end{arr}
+
+	\begin{arr}[b]
+		\sec \theta = -3 \\
+		\therefore \cos \theta = -\inverse{3} \quad \therefore \theta = 109 \deg \sig{3} \\
+		\text{The solutions in the interval are $-109 \deg$ and $109 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[c]
+		\cot \theta = 3.45 \\
+		\therefore \tan \theta = \inverse{3.45} \quad \therefore \theta = 16.2 \sig{3} \\
+		\text{The solutions in the interval are $-164 \deg$ and $16.2 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[d]
+		2\csc^2 \theta - 3\csc \theta = 0 \\
+		\therefore \sin \theta = \frac{2}{3} \quad \therefore \theta = 41.8 \sig{3} \\
+		\text{The solutions in the interval are $41.8 \deg$, and $138 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[e]
+		\sec \theta = 2 \cos \theta \\
+		\therefore \cos \theta = \pm \inverse{\sqrt{2}} \quad \therefore \theta = 45 \deg \\
+		\text{The solutions in the interval are $\pm 45 \deg$ and $\pm 135 \deg$}
+	\end{arr}
+
+	\begin{arr}[f]
+		3\cot \theta = 2\sin \theta \\
+		\Rightarrow 3\cos \theta = 2\sin^2 \theta \\
+		\Rightarrow 2\cos^2 \theta + 3\cos \theta - 2 = 0 \\
+		\Rightarrow \cos \theta = \frac{-3 \pm 5}{4} \\
+		\therefore \cos \theta = \inverse{2} \quad \therefore \theta = 60 \deg \\
+		\text{The solutions in the interval are $\pm 60 \deg$}
+	\end{arr}
+
+	\begin{arr}[g]
+		\csc 2\theta = 4 \\
+		\therefore \sin 2\theta = \inverse{4} \quad \therefore 2\theta = 14.48 \deg \sig{3} \\
+		\text{The solutions in the interval are $-173 \deg$, $-97.2 \deg$, $7.24 \deg$, and $82.8 \deg$\sig{3}}
+	\end{arr}
+
+	\begin{arr}[h]
+		2\cot^2 \theta - \cot \theta - 5 = 0 \\
+		\Rightarrow \cot \theta = \frac{1 \pm \sqrt{41}}{4} \\
+		\therefore \tan \theta = \frac{-1 + \sqrt{41}}{10}, -\frac{1 + \sqrt{41}}{10} \quad \therefore \theta = 28.4 \deg, -36.5 \deg \sig{3} \\
+		\text{The solutions in the interval are $-152 \deg$, $-36.5 \deg$, $28.4 \deg$, and $143 \deg$\sig{3}}
+	\end{arr}
+
+	% Question 7 
+	
+	\question{Solve the following equations for values of $\theta$ in the interval $0 \leq \theta \leq 2\pi$. Give your answers in terms of $\pi$.}
+	
+	\begin{arr}[a]
+		\sec \theta = -1 \\
+		\therefore \cos \theta = -1 \quad \therefore \theta = \pi \rad \\
+		\text{The only solution in the interval is $\pi \rad$}
+	\end{arr}
+
+	\begin{arr}[b]
+		\cot \theta = -\sqrt{3} \\
+		\therefore \tan \theta = -\inverse{\sqrt{3}} \quad \therefore \theta = -\inverse{6} \pi \rad \\
+		\text{The solutions in the interval are $\frac{5}{6} \pi \rad$ and $\frac{11}{6} \pi \rad$}
+	\end{arr}
+
+	\begin{arr}[c]
+		\csc(\inverse{2} \theta) = \frac{2\sqrt{3}}{3} \\
+		\therefore \sin(\inverse{2} \theta) = \frac{\sqrt{3}}{2} \quad \therefore \inverse{2} \theta = \inverse{3} \pi \rad \\
+		\text{The solutions in the interval are $\frac{2}{3} \pi \rad$ and $\frac{4}{3} \pi \rad$}
+	\end{arr}
+
+	\begin{arr}[d]
+		\sec \theta = \sqrt{2}\tan \theta \quad (\theta \neq \inverse{2}\pi, \theta \neq \frac{3}{2}\pi) \\
+		\therefore \sin \theta = \inverse{\sqrt{2}} \quad \therefore \theta = \inverse{4} \pi \rad \\
+		\text{The solutions in the interval are $\inverse{4} \pi \rad$ and $\frac{3}{4} \pi \rad$}
+	\end{arr}
+
+	% Question 8
+	
+	\question{In the diagram $AB = 6\text{cm}$ is the diameter of the circle and $BT$ is the tangent to the circle at $B$. The chord $AC$ is extended to meet this tangent at $D$ and $\angle DAB = \theta$.}
+	
+	\begin{arr}[a]
+		\textit{Show that $CD = 6(\sec \theta - \cos \theta)$cm} \\ \\
+
+		\text{In $\triangle ABD$, } 6\sec \theta = AD \\
+		\text{In $\triangle ABC$, } 6\cos \theta = AC \\
+		CD = AD - AC = 6\sec \theta - 6\cos \theta \\
+		\therefore CD = 6(\sec \theta - \cos \theta)
+	\end{arr}
+
+	\begin{arr}[b]
+		\textit{Given that $CD = 16$cm, calculate the length of the chord $AC$.} \\ \\
+
+		6(\sec \theta - \cos \theta) = 16 \\
+		3(\inverse{\cos \theta} - \cos \theta) = 8 \\
+		8\cos \theta = 3 - 3\cos^2 \theta \\
+		3\cos^2 \theta + 8\cos \theta -3 = 0 \\
+		\cos \theta = \frac{-8 \pm 10}{6} = \inverse{3}, -3 \text{ (-3 is not possible)} \\ \\
+
+		AC = 6\cos \theta = 6 \cdot \inverse{3} = 2 \text{cm}
+	\end{arr}
+
+	% Question 9 
+	
+	\question
+	
+	\begin{arr}[a]
+		\textit{Prove that $\frac{\csc x - \cot x}{1 - \cos x} \equiv \csc x$} \\ \\
+
+		\frac{\inverse{\sin x} - \frac{\cos x}{\sin x}}{1 - \cos x} \equiv \frac{\frac{1 - \cos x}{\sin x}}{1 - \cos x} = \frac{(1 - \cos x)}{\sin x \cdot (1 - \cos x)} \equiv \inverse{\sin x} = \csc x
+	\end{arr}
+
+	\begin{arr}[b]
+		\textit{Hence solve, in the interval $-\pi \leq x \leq \pi$ the equation $\frac{\csc x - \cot x}{1 - \cos x}$ = 2} \\ \\
+
+		\csc x = 2 \\
+		\therefore \sin x = \inverse{2} \quad \therefore x = \inverse{6} \pi \rad \\
+		\text{The solutions in the interval are $\inverse{6} \pi \rad$ and $\frac{5}{6} \pi \rad$}
+	\end{arr}
+
+	\newpage
+
+	% Question 10
+	
+	\question
+	
+	\begin{arr}[a]
+		\textit{Prove that $\frac{\sin x \tan x}{1 - \cos x} - 1 \equiv \sec x$} \\ \\
+
+		\frac{\frac{\sin^2 x}{\cos x}}{1 - \cos x} - 1 \equiv \frac{\sin^2 x}{\cos x \cdot (1 - \cos x)} - 1 \equiv \frac{\sin^2 + \cos^2 x - \cos x}{\cos x \cdot(1 - \cos x)} \equiv \frac{1 - \cos x}{\cos x \cdot (1 - \cos x)} \equiv \inverse{\cos x} \equiv \sec x
+	\end{arr}
+
+	\begin{arr}[b]
+		\textit{Hence explain why the equation $\frac{\sin x \tan x}{1 - \cos x} - 1 = -\inverse{2}$ has no solutions.} \\ \\
+
+		\sec x = -\inverse{2} \\
+		\Rightarrow \cos x = -2 \\
+		\text{$\cos x$'s range is between $-1$ and $1$, therefore $\cos(-2)$ has no solutions.}
+	\end{arr}
+
+	% Question 11
+	
+	\question{Solve, in the interval $0 \leq x \leq 360 \deg$, the equation $\frac{1 + \cot x}{1 + \tan x} = 5$.}
+	
+	\begin{arr}
+		\frac{1 + \cot x}{1 + \tan x} = 5 \\
+		\Rightarrow \frac{\sin x + \cos x}{\sin x} \div \frac{\sin x + \cos x}{\cos x} = 5 \\
+		\Rightarrow \frac{\cos x \cdot (\sin x + \cos x)}{\sin x \cdot (\sin x + \cos x)} = 5 \\
+		\cot x = 5 \\
+		\therefore \tan x = \inverse{5} \quad \therefore x = 11.3 \deg \sig{3} \\
+		\text{The solutions in the interval are $11.3 \deg$ and $191.3 \deg$\sig{3}}
+	\end{arr}
+\end{document}

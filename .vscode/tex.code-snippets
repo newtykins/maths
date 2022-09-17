@@ -1,32 +1,23 @@
-{
-	"Begin a dmath block": {
-		"prefix": "dmath",
+{	
+	"Begin a new question": {
+		"prefix": "question",
 		"body": [
-			"\\begin{dmath}",
+			"% Question $0",
 			"",
-			"\\end{dmath}"
+			"\\question{$1}",
+			"",
+			"\\begin{arr}",
+			"",
+			"\\end{arr}"
 		]
 	},
 	
-	"Begin a new single-part question": {
-		"prefix": "question",
+	"Begin a new array environment": {
+		"prefix": "array",
 		"body": [
-			"\\section*{Question $0}",
-			"\\text{$1}",
-			"\\begin{dmath}",
+			"\\begin{arr}[$1]",
 			"",
-			"\\end{dmath}"
-		]
-	},
-
-	"Begin a new multi-part question": {
-		"prefix": "question-m",
-		"body": [
-			"\\section*{Question $0}",
-			"\\text{$1}",
-			"\\begin{subequations}",
-			"",
-			"\\end{subequations}"
+			"\\end{arr}"
 		]
 	}
 }

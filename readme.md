@@ -1,5 +1,19 @@
 ![](assets/banner.jpeg)
 
-# newtykins/maths
+# welcome to the maths hub!
 
-readme still coming soon
+I hope you enjoy your stay! Here you can find a bunch of maths homework alongside other things that I have done which I feel are worthwhile or downright silly!
+
+### Table of Contents
+
+- Homework
+	- [Source Files](https://github.com/newtykins/maths/blob/main/tex/Homework)
+	- [PDFs](https://github.com/newtykins/maths/blob/main/pdf/Homework)
+
+- Other
+	- [Source Files](https://github.com/newtykins/maths/blob/main/tex/Other)
+	- [PDFs](https://github.com/newtykins/maths/blob/main/pdf/Other)
+
+<sub>:]</sub>
+
+![](assets/amazing!!.gif)

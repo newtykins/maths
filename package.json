@@ -1,15 +1,10 @@
 {
   "name": "maths",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "prepare": "husky install",
     "build": "./.husky/pre-commit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "husky": "^8.0.1"
   }
