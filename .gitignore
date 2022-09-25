@@ -2,13 +2,10 @@ pnpm-lock.yaml
 node_modules
 *.synctex.gz
 temp
-
-tex/**/*.png
 tex/**/*.pdf
-png/**/*.tex
-png/**/*.pdf
-pdf/**/*.tex
-pdf/**/*.png
+
+pdf
+png
 
 # WIP
 Exercise 6D.*

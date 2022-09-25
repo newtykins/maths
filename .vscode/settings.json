@@ -5,8 +5,17 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "assets": true,
+        "pdf": true,
+        "png": true
     },
+    
     "latex-workshop.latex.autoBuild.run": "onFileChange",
-    "latex-workshop.latex.autoClean.run": "onBuilt"
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.message.badbox.show": false,
+    "latex-workshop.message.latexlog.exclude": [
+        "headheight",
+        "large",
+    ]
 }

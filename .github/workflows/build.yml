@@ -2,7 +2,7 @@ name: Build LaTeX documents
 on: [push]
 
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout git repository
@@ -15,7 +15,7 @@ jobs:
           version: 1.0
 
       - name: Build project
-        run: ${GITHUB_WORKSPACE}/build
+        run: ${GITHUB_WORKSPACE}/scripts/build
 
       - name: Change the remote protocol from SSH to HTTPS
         run: git remote set-url origin https://github.com/newtykins/maths
@@ -23,6 +23,5 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Built latest changes
-          commit_user_name: LaTeX Builder
+          commit_message: ${{ github.event.head_commit.message }}
 

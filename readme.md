@@ -1,4 +1,6 @@
-![](assets/banner.jpeg)
+<div align="center">
+	<img src="assets/cat.jpg" height="250">
+</div>
 
 # welcome to the maths hub!
 
@@ -16,4 +18,6 @@ I hope you enjoy your stay! Here you can find a bunch of maths homework alongsid
 
 <sub>:]</sub>
 
-![](assets/amazing!!.gif)
+<div align="center">
+	<img src="assets/globe.gif" height="250">
+</div>

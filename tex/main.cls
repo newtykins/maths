@@ -1,5 +1,3 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{main}[17/09/2022 Primary class]
 \LoadClass[12pt,letterpaper]{article}
 
 \usepackage{breqn}
