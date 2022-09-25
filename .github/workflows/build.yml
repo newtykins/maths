@@ -1,0 +1,28 @@
+name: Build LaTeX documents
+on: [push]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v2
+    
+      - name: Install dependencies
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: texlive texlive-science texlive-pictures optipng graphicsmagick
+          version: 1.0
+
+      - name: Build project
+        run: ${GITHUB_WORKSPACE}/build
+
+      - name: Change the remote protocol from SSH to HTTPS
+        run: git remote set-url origin https://github.com/newtykins/maths
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Built latest changes
+          commit_user_name: LaTeX Builder
+

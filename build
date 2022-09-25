@@ -61,6 +61,8 @@ do
 			done
 
 			gm convert -append "./temp/*.jpg" "${fileName}.png"
+
+			optipng -quiet "${fileName}.png"
 			
 			rm -rf temp
 		fi
@@ -99,5 +101,3 @@ do
 		fi
 	fi
 done
-
-git add .
