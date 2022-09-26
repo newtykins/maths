@@ -8,9 +8,10 @@ I hope you enjoy your stay! Here you can find a bunch of maths homework alongsid
 
 ### Table of Contents
 
-- Homework
-	- [Source Files](https://github.com/newtykins/maths/blob/main/tex/Homework)
-	- [PDFs](https://github.com/newtykins/maths/blob/main/pdf/Homework)
+- School
+	- Homework
+		- [Source Files](https://github.com/newtykins/maths/blob/main/tex/School/Homework)
+		- [PDFs](https://github.com/newtykins/maths/blob/main/pdf/School/Homework)
 
 - Other
 	- [Source Files](https://github.com/newtykins/maths/blob/main/tex/Other)

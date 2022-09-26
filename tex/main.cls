@@ -15,6 +15,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \renewcommand{\arraystretch}{1.4}
+\renewcommand{\quad}{\qquad}
 
 \fancyhf{}
 \rfoot{Page \thepage}
@@ -29,6 +30,14 @@
 
 % Utility commands
 \newcommand{\inverse}[1]{\frac{1}{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\round}[1]{\lfloor #1 \rfloor}
+
+% Spacing after therefore
+\let\oldtherefore\therefore
+\renewcommand\therefore{\oldtherefore\mskip\thickmuskip}
 
 % Homework Environment & Titles
 \renewcommand{\title}[1]{\section*{\texttt{#1}}}
@@ -49,10 +58,10 @@
 \newcounter{questionCount}
 \setcounter{questionCount}{0}
 
+\newcommand{\skipquestions}[1]{\setcounter{questionCount}{#1}}
+
 \NewDocumentCommand{\question}{o}{
 	\paragraph{Question \thequestionCount}
 	\IfNoValueTF{#1}{}{\textit{#1}}
 	\addtocounter{questionCount}{1}
 }
-
-	

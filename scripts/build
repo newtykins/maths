@@ -48,8 +48,8 @@ do
 		readarray -d . -t arr <<< $file
 		readarray -d / -t pathSegments <<< "${arr[1]}"
 
-		# Ignore the homework directory when creating PNGs - they are unnecessary
-		if [ "${pathSegments[2]}" != "Homework" ]; then
+		# Ignore the school directory when creating PNGs - they are unnecessary
+		if [ "${pathSegments[2]}" != "School" ]; then
 			fileName="${arr[1]:1}"
 			
 			mkdir temp
