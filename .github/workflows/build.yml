@@ -1,5 +1,11 @@
 name: Build LaTeX documents
-on: [push]
+on:
+  push:
+    paths:
+      - tex/**
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
